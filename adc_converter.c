@@ -29,7 +29,7 @@ int main()
         }
     } while (valor_adc > 1023 || valor_adc < 0);
 
-    analogico = (valor_adc * 5.0) / 1024;
+    analogico = (float)((valor_adc * 5.0) / 1023.0);
     printf("O valor correspondente é %.2f volts\n", analogico);
 
     printf("Pressione ENTER para sair...\n");
