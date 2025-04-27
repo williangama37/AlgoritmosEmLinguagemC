@@ -36,7 +36,6 @@ int main()
 
     printf("Pressione ENTER para sair...\n");
     getchar();
-    getchar();
     return 0;
 }
 
