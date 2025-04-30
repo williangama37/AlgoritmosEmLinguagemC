@@ -1,0 +1,72 @@
+/* =====================================================================================
+    Autor: Willian Gama da Silva
+
+desenvolva uma macro que calcule a média ponderada entre 3 
+notas de 1 a 10. Desenvolva o projeto da interface, onde o usuário entra com a nota e o 
+respectivo peso. Ao final do terceiro peso, o sistema calcula o resultado.
+Exemplo: o usuário entra com
+Nota 1= 7,0 Peso 1 = 2
+Nota 2 = 8,5 Peso 2 = 3
+Nota 3 = 9,1 Peso 3 = 5
+O sistema resolverá a equação
+mp = (n1 × p1 + n2 × p2 + n3 × p3)/(p1+p2+p3) retornando 8,5
+	
+  Curso: WR Kits, curso de C definitivo. Ministrado pelo Dr. Eng. Wagner Rambo
+  Módulo 6, aula 4 Macros
+  Data: 30/04/2025
+======================================================================================= */
+
+#include <stdio.h>
+
+#define disp(texto) printf(#texto)
+#define media_ponderada(n1,p1,n2,p2,n3,p3) (n1*p1+n2*p2+n3*p3)/(p1+p2+p3)
+               
+
+int main()
+{
+    float nota1 = 0.0,
+          nota2 = 0.0,
+          nota3 = 0.0;
+          
+    int   peso1 = 2,
+          peso2 = 3,
+          peso3 = 5;
+    char c; /*Auxiliar para limpar o buffer*/
+    disp(Media Ponderada);
+    do {
+       printf("\nDigite a nota 1: ");
+       if (scanf("%f", &nota1) != 1 || nota1 < 0 || nota1 > 10){
+           printf("\nEntrada inválida, tente novamente");
+           while((c = getchar() != '\n' && c != EOF));
+       }
+       else{
+           break;
+       }
+    }while(1);
+    
+    do {
+       printf("\nDigite a nota 2: ");
+       if (scanf("%f", &nota2) != 1 || nota2 < 0 || nota2 > 10){
+           printf("\nEntrada inválida, tente novamente");
+           while((c = getchar() != '\n' && c != EOF));
+       }
+       else{
+           break;
+       }
+    }while(1);
+
+    do {
+       printf("\nDigite a nota 3: ");
+       if (scanf("%f", &nota3) != 1 || nota3 < 0 || nota3 > 10){
+           printf("\nEntrada inválida, tente novamente");
+           while((c = getchar() != '\n' && c != EOF));
+       }
+       else{
+           break;
+       }
+    }while(1);
+    
+    printf("\n %.2f", media_ponderada(nota1,peso1,nota2,peso2,nota3,peso3));
+
+    return 0;
+}
