@@ -16,7 +16,7 @@ Multiplicando cada valor pela quantidade e somando tudo, o resultado é $ 9369,8
 Portanto, o alerta será emitido, pois o aporte é menor.
 
 Curso: WR Kits, curso de C definitivo. Ministrado pelo Dr. Eng. Wagner Rambo
-Módulo 6, aula 1 Parâmetros de funções
+Módulo 7, aula 0 Vetores
 Data: 01/05/2025
 ===================================================================================*/
 #include <stdio.h>
