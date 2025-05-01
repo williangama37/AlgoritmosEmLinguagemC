@@ -31,7 +31,7 @@ int main()
     int   peso1 = 2,
           peso2 = 3,
           peso3 = 5;
-    char c; /*Auxiliar para limpar o buffer*/
+    int c; /*Auxiliar para limpar o buffer*/
     disp(Media Ponderada);
     do {
        printf("\nDigite a nota 1: ");
