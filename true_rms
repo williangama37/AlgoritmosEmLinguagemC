@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+float true_rms(float volts[], int N);
+
+int main()
+{
+    float v[5] = {1.5, 3.8, 4.9, 5.7, 2.1}; /*exemplo de entrada de tensão*/
+    
+    printf("Vrms = %.4f V\n", true_rms(v, 5));
+
+    return 0;
+}
+
+float true_rms(float volts[], int N){
+    register int i;
+    float rms = 0.0;
+    
+    for(i=0; i<N; i++){
+        volts[i] *= volts[i];
+    }
+    
+    for(i=0; i<N; i++){
+        rms += volts[i];
+    }
+    
+    rms /= N;
+    
+    return sqrt(rms);    
+}
